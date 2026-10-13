@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayLoom-Weave Your Day</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Main Application Container -->
+   <main class="app-container">
+
+    <!-- Section 1: Header & Progress Tracker -->
+    <header class="app-header">
+      <h1>DayLoom</h1>
+      <p class="tagline">Weave your day, one task at a time.</p>
+
+      <div class="progress-box">
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <span class="progress-text" id="progressText">0% woven</span>
+      </div>
+    </header>
+
+    <!-- Section 2: Task Creation Form -->
+    <form class="task-form" id="taskForm">
+      <input 
+        type="text" 
+        id="taskInput" 
+        placeholder="Add a new task thread..." 
+        autocomplete="off"
+        required
+      />
+      <button type="submit" id="addBtn">Weave</button>
+    </form>
+
+    <!-- Section 3: Filter Control Bar -->
+    <div class="filters">
+      <button type="button" class="filter-btn active" data-filter="all">All</button>
+      <button type="button" class="filter-btn" data-filter="active">Active</button>
+      <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <!-- Section 4: Dynamic Task List -->
+    <ul class="task-list" id="taskList">
+      <!-- JavaScript will dynamically insert <li> items here -->
+    </ul>
+
+    <!-- Section 5: Footer Utilities -->
+    <footer class="app-footer">
+      <span id="taskCounter">0 tasks remaining</span>
+      <button type="button" id="clearCompletedBtn">Clear Completed</button>
+    </footer>
+
+   </main>
+
+  <!-- JavaScript Script Link -->
+  <script src="script.js"></script>
+ </body>
+</html>
