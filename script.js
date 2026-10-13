@@ -163,3 +163,10 @@ clearCompletedBtn.addEventListener("click", () => {
 // 6. INITIAL APPLICATION LOAD
 // ==========================================================================
 render();
+
+// Register Service Worker for PWA / Installability
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js")
+    .then(() => console.log("DayLoom PWA Ready"))
+    .catch((err) => console.log("SW Registration Failed:", err));
+}
